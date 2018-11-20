@@ -1,5 +1,4 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+
 import Vue from 'vue'
 // 引入vue
 import App from './App'
@@ -34,7 +33,6 @@ Vue.filter('getDay',function(value){
 })
 
 
-
 // 引入路由，挂载到实例new Vue中加上router，则子类组件都可以继承通过this.$route进行使用
 import router from './router/index.js'
 
@@ -44,8 +42,7 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
-
-/* eslint-disable no-new */
+// 路由挂载到实例new 
 new Vue({
   el: '#app',
   router,

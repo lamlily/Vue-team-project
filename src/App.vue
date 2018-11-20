@@ -4,12 +4,13 @@
     <HelloWorld/> -->
     <Header></Header>
     <!-- <Slider></Slider> -->
-    <!-- <Home></Home> -->
+    <!-- <Home></Home> --> 
     <router-view></router-view>
 
+    <Footer></Footer>
 
   </div>
-</template>
+</template> 
 
 
 <script>
@@ -18,14 +19,14 @@ import Header from './components/commons/Header.vue'
 // import Slider from './components/commons/Slider.vue'
 // import Home from './components/pages/Home/Home.vue'
 
-// 
+import Footer from "./components/commons/Footer.vue"
 
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    Header//,Slider,Home
+    Header,Footer//,Slider,Home
   },
   mounted(){
     console.log(this);
@@ -43,4 +44,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }*/
+#app{
+  height:100%;
+  display:flex;
+  flex-direction: column;
+}
 </style>

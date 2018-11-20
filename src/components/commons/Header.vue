@@ -2,7 +2,9 @@
     <div class="header">
         <!-- <div>这里是header</div> -->
         <div class="box">
-           <input type="text" placeholder="儿童补钙" />
+           <input type="text" placeholder="儿童补钙"
+            @click="search"
+            />
             <div class="log">登录</div>  
         </div>
           
@@ -21,7 +23,9 @@
             }
         },
         methods:{
-            
+            search(){
+                this.$router.push("/search")
+            }
         }
     }
 
@@ -32,7 +36,10 @@
 // 引入配置样式总模块，固定写法
 @import url('../../styls/main.less');
 .header{
-    
+     position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
     .box{
         // width:100%;
         .w(375);
