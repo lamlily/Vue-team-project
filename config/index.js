@@ -12,14 +12,20 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/api':{
-            target:'https://m.maizuo.com/',
+            // target:'https://m.maizuo.com/',
+            // https://www.baiyangwang.com/mobile/index.php?act=index
+            // https://www.baiyangwang.com/mobile/index.php?act=index
+            target:'https://www.baiyangwang.com',
             changeOrigin:true,
             pathRewrite:{'^/api':''}
         }
     },
 
     // Various Dev Server settings
+    // host: '10.3.136.28', // can be overwritten by process.env.HOST
     host: '10.3.136.28', // can be overwritten by process.env.HOST
+    // host: 'localhost',
+    
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

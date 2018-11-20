@@ -7,7 +7,7 @@
             <!-- 通过v-for循环动态生成数据 -->
                 <div class="swiper-slide" v-for="(item,index) in bannerlist" :key="index">
                     <!--轮播图的图片 -->
-                    <img :src="item.imageUrl" alt="" />
+                    <img :src="item.image" alt="" />
                     <!-- 通过axios请求get获取到网站的图片 -->
                 </div>
                 <!-- <div class="swiper-slide">Slide 2</div>
@@ -48,17 +48,24 @@ import Axios from 'axios'
         },
         methods:{
             getBannerData(){
-                Axios.get('/api/v4/api/billboard/home?__t=1542262686031',{})
+                console.log(666666666)
+                Axios.get('/api/mobile/index.php?act=index',{})
                .then((res)=>{
-                    if (res.data.status==0) {
-                         this.bannerlist=res.data.data.billboards
+                // console.log(res)
+                    // if (res.data.status==0||res.data.status==200) {
+                        console.log(res.data.datas)
+                         this.bannerlist=res.data.datas.list[0].adv_list.item
+                         console.log(777,this.bannerlist)
+                         // 网站右键直接可以复制请求的写法：
+                         // data.datas.list[""0""].adv_list.item[""0""].image
+                         
                          Vue.nextTick(()=>{
                             console.log(this)
                             this.initSwiper()
                          })
-                    }else{
-                        alert(res.data.msg)
-                    }
+                    // }else{
+                    //     alert(res.data.msg)
+                    // }
                   
                 })  
                 .catch((err)=>{
@@ -74,7 +81,7 @@ import Axios from 'axios'
                     autoplay: {
                     delay: 2500,
                     // disableOnInteraction: false,
-                  },
+                    },
                     // 如果需要分页器
                     pagination: {
                       el: '.swiper-pagination',
