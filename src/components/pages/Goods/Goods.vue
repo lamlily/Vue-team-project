@@ -1,10 +1,10 @@
 
 <template>
-    <div class="movie">
+    <div class="goods">
         我是电影页movie vue
 
 
-        <Movielist></Movielist>
+        <Goodslist></Goodslist>
 
         <BackTop></BackTop>
     </div>
@@ -12,14 +12,14 @@
 
 
 <script type="text/javascript">
-import Movielist from './Movielist.vue'
-import BackTop from '../../commons/BackTop.vue'
+import Goodslist from './Goodslist.vue'
+import BackTop from './BackTop.vue'
 
 
     export default{
-        name:'Movie',
+        name:'Goods',
         // 注册组件
-        components:{Movielist,BackTop},
+        components:{Goodslist,BackTop},
         data(){
             return{
                          

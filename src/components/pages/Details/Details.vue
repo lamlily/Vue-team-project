@@ -20,6 +20,7 @@
             }
         },
         methods:{
+        },
            
         created(){
         

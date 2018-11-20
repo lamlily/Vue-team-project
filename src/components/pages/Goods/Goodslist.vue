@@ -1,7 +1,7 @@
 
 <template>
-    <div class="movie">
-        我是movielist vue     
+    <div class="goodslist">
+        我是Goodslist vue     
     </div>
 </template>
 
@@ -16,7 +16,7 @@ import {InfiniteScroll} from "mint-ui";
 Vue.use(InfiniteScroll);
 
     export default{
-        name:'Movielist',
+        name:'Goodslist',
         components:{},
         data(){
             return{
