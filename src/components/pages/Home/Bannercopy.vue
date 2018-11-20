@@ -121,7 +121,7 @@ import Axios from 'axios'
 
 img{
     .w(375);
-    .h(180);
+    .h(210);
 }
 
 </style>

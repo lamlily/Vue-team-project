@@ -7,7 +7,7 @@
             <!-- 通过v-for循环动态生成数据 -->
                 <div class="swiper-slide" v-for="(item,index) in bannerlist" :key="index">
                     <!--轮播图的图片 -->
-                    <img :src="item.imageUrl" alt="" />
+                    <img :src="item.image" alt="" />
                     <!-- 通过axios请求get获取到网站的图片 -->
                 </div>
                 <!-- <div class="swiper-slide">Slide 2</div>
@@ -48,10 +48,11 @@ import Axios from 'axios'
         },
         methods:{
             getBannerData(){
-                Axios.get('/api/v4/api/billboard/home?__t=1542262686031',{})
+                Axios.get('/api/mobile/index.php?act=index',{})
                .then((res)=>{
                     if (res.data.status==0) {
-                         this.bannerlist=res.data.data.billboards
+                        console.log(res.data.datas)
+                         this.bannerlist=res.datas.datas.list.adv_list
                          Vue.nextTick(()=>{
                             console.log(this)
                             this.initSwiper()
@@ -121,7 +122,7 @@ import Axios from 'axios'
 
 img{
     .w(375);
-    .h(180);
+    .h(210);
 }
 
 </style>

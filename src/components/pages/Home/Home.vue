@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-      <!--   <Banner></Banner>
-        <Homelist></Homelist> -->
-       
+        <Banner></Banner>
+        <Homelist></Homelist>
+       这里是home组件
     </div>
 </template>
 
@@ -29,6 +29,8 @@ import Homelist from './Homelist.vue'
 
 <style lang="less" scoped>
 @import url('../../../styls/main.less');
-  
+  .home{
+
+  }
 
 </style>
