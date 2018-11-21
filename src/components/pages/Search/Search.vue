@@ -51,9 +51,10 @@
     .h(56);
    
     .fs(16);
-    .padding(15,10,10,30);
+    .padding(15,10,10,10);
+    margin-top:35px;
     p{
-        .margin(10,0,10,0); 
+        .margin(10,0,20,0); 
         color:#999;
         i{
             margin-right:10px;

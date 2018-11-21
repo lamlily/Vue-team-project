@@ -53,10 +53,11 @@ import Axios from 'axios'
                .then((res)=>{
                 // console.log(res)
                     // if (res.data.status==0||res.data.status==200) {
+                    //图片信息获取并加入到bannerlist数组
                         console.log(res.data.datas)
                          this.bannerlist=res.data.datas.list[0].adv_list.item
                          console.log(777,this.bannerlist)
-                         // 网站右键直接可以复制请求的写法：
+                         // 网站右键copy property path 直接可以复制请求的写法：
                          // data.datas.list[""0""].adv_list.item[""0""].image
                          
                          Vue.nextTick(()=>{
@@ -86,6 +87,7 @@ import Axios from 'axios'
                     pagination: {
                       el: '.swiper-pagination',
                     },
+                     
                     
                     // // 如果需要前进后退按钮
                     // navigation: {
@@ -128,10 +130,15 @@ import Axios from 'axios'
 @import url('../../../styls/main.less');
 /*引入swiper 轮播图插件 样式*/
 @import url('../../../../node_modules/swiper/dist/css/swiper.min.css');
-
-img{
+.banner{
     .w(375);
-    .h(210);
+    .h(180);
+      img{
+        /*.w(375);*/
+        .h(180);
+        margin:0;
+    }  
 }
+
 
 </style>
