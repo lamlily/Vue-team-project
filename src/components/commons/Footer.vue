@@ -1,21 +1,28 @@
 <template>
     <div class="footer" >
        <ul>
-           <li>
+           <!-- li @click='goPage(item.path)'>
                 <i class="fa fa-university" aria-hidden="true"></i>
                 <span>商城</span>
             </li>
-           <li>
+           <li @click='goPage(item.path)'>
                 <i class="fa fa-bars" aria-hidden="true"></i>
                 <span>分类</span>
            </li>
-           <li>
+           <li @click='goPage(item.path)'>
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <span>购物车</span>
            </li>
-           <li>
+           <li @click='goPage(item.path)'>
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span>我的</span>
+           </li> -->
+           <li 
+           v-for="(item,index) in tablist"
+           :key="index"
+           @click='goPage(item.path)'>
+                <i :class="item.icon" aria-hidden="true"></i>
+                <span>{{item.name}}</span>
            </li>
        </ul>
     </div>
@@ -31,11 +38,14 @@
         components:{},
         data(){
             return{
-              
+              tablist:[{name:'商城',path:"/home",icon:"fa fa-university"},{name:'分类',path:"/goods",icon:"fa fa-bars"},{name:'购物车',path:'/shoppingcar',icon:"fa fa-shopping-cart"},{name:'我的',path:"/my",icon:"fa fa-user"}]
             }
         },
         methods:{
-           
+           goPage(path){
+            console.log(999)
+            this.$router.push(path)
+           }
         },
         created(){
         
@@ -52,6 +62,7 @@
 @import url('../../styls/main.less');
 
 .footer{
+    .w(375);
     position:fixed;
     bottom:0;
     left:0;

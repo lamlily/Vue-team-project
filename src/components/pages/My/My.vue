@@ -1,13 +1,18 @@
-<template>
-    <div class="my" >
-      这是我的页面
-      <router-view></router-view>
-    </div>
 
+<template>
+    <div class="my">
+        我是我是我是my.vue
+        是我是我是my.vue是我是我是my.vue
+        <router-view></router-view>
+
+
+      
+    </div>
 </template>
 
 
-<script >
+<script type="text/javascript">
+
 
 
     export default{
@@ -15,26 +20,19 @@
         components:{},
         data(){
             return{
-              
+                         
             }
         },
         methods:{
            
-        },
-        created(){
-
         }
-
 
     }
 </script>
 
 
 <style lang="less" scoped>
-// 引入配置样式总模块，固定写法
 @import url('../../../styls/main.less');
 
 
-    
-    
 </style>

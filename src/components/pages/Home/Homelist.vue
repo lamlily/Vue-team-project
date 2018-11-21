@@ -197,7 +197,7 @@
                     </li>  
                 </ul>
             </div>
-            <p class="last">已经到底了</p>
+            <p class="last">----  我是有底线的哟 ----</p>
          
         </div>
     </div>
@@ -246,8 +246,6 @@ import {lazyload} from 'mint-ui';
               producepic9:[],
               others:[],
              
-
-
             }
         },
         methods:{
@@ -336,7 +334,7 @@ import {lazyload} from 'mint-ui';
 .homelist{
     .homebox{
         .w(375);
-        .h(9390);
+        .h(9420);
         background:rgba(0,255,200,0.2);
         .head{
             .h(62);
@@ -545,7 +543,7 @@ import {lazyload} from 'mint-ui';
             ul{
                 display:flex;
                 flex-wrap:wrap;
-                .margin(0,0,0,6);
+                .margin(0,2,0,4);
 
                 li{
                     .w(180);
@@ -588,9 +586,11 @@ import {lazyload} from 'mint-ui';
             }
         }
         .last{
-            color:#ccc;
+            .h(50);
+            // color:#ccc;
             .fs(16);
             text-align: center;
+            .lh(50);
         }
     }
 }

@@ -1,7 +1,7 @@
 
 <template>
     <div class="goods">
-        我是电影页movie vue
+        我是goods.vue
 
 
         <Goodslist></Goodslist>

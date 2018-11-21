@@ -14,7 +14,8 @@ import Goods from '../components/pages/Goods/Goods.vue'
 import Details from "../components/pages/Details/Details.vue"
 // 引入search搜索页面
 import Search from '../components/pages/Search/Search.vue'
-
+//引入购物车页面
+import ShoppingCar from "../components/pages/ShoppingCar/ShoppingCar.vue"
 //引入我的页面my
 import My from "../components/pages/My/My.vue"
 //引入My我的页面下的子页面login登录页面
@@ -23,6 +24,7 @@ import Login from "../components/pages/My/Login.vue"
 import Myinfo from "../components/pages/My/MyInfo.vue"
 //引入我的页面下的子页面register注册页面
 import Register from "../components/pages/My/Register.vue"
+
 
 
 // 设置路由 配置
@@ -54,6 +56,11 @@ let router = new VueRouter({
         path:'/search',
         component:Search,
         name:'search'
+    },
+    {
+        path:'/shoppingcar',
+        component:ShoppingCar,
+        name:'shoppingcar'
     },
 
     {
