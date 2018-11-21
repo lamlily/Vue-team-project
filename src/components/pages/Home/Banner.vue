@@ -25,6 +25,7 @@
             <!-- <div class="swiper-scrollbar"></div> -->
             <!-- {{bannerlist}} -->
         </div>
+        
 
     </div>
 </template>
@@ -130,6 +131,7 @@ import Axios from 'axios'
 @import url('../../../styls/main.less');
 /*引入swiper 轮播图插件 样式*/
 @import url('../../../../node_modules/swiper/dist/css/swiper.min.css');
+
 .banner{
     .w(375);
     .h(180);
@@ -139,6 +141,7 @@ import Axios from 'axios'
         margin:0;
     }  
 }
+
 
 
 </style>

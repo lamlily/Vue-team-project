@@ -299,10 +299,6 @@ import {lazyload} from 'mint-ui';
                 //others
                 this.others = this.others.concat(res.data.datas.list[22].new_goods.item)
                
-                
-
-                
-
 
 
                 console.log(this.piclist)
@@ -392,7 +388,7 @@ import {lazyload} from 'mint-ui';
             }
         }
         .product0{
-            .w(386);
+            .w(363);
             .h(500);
             // background:orange;
             .margin(0,0,10,0);
@@ -457,7 +453,7 @@ import {lazyload} from 'mint-ui';
             }
         }
         .produce0{
-            .w(386);
+            .w(363);
             .h(241);
             // background: yellow;
              .margin(0,0,10,0);
@@ -517,7 +513,7 @@ import {lazyload} from 'mint-ui';
             }
         }
         .produce9{
-            .w(386);
+            .w(363);
             .h(325);
             // background: red;
             div{
@@ -593,6 +589,7 @@ import {lazyload} from 'mint-ui';
             .lh(50);
         }
     }
+    
 }
    
 </style>

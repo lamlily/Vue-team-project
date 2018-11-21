@@ -1,7 +1,7 @@
 
 <template>
     <div class="goods">
-        我是goods.vue
+        <!-- 我是goods.vue -->
 
 
         <Goodslist></Goodslist>
