@@ -38,6 +38,8 @@
 import Vue from "vue"
 // 引入axios(main.js)
 import Axios from 'axios'
+// 引入swiper 轮播图插件
+import Swiper from 'swiper'
 import {lazyload} from 'mint-ui';
 
     export default{
