@@ -101,7 +101,7 @@
         </div> 
 
 
-        
+
     </div>
 </template>
 
@@ -139,6 +139,14 @@ Vue.use(InfiniteScroll);
                selInit:"17",
 
 
+               loading:false,
+                // 加载过程中不让加载字体图标滚动，false为触发滚动。true为不能滚动，默认为false可以滚动
+
+                // 分页，默认为0;总页数为10
+                current:0,
+                total:10
+
+
 
             }
         },
@@ -153,6 +161,32 @@ Vue.use(InfiniteScroll);
 
 
            getData(id){
+
+            // 因为页面到底会出现加载图标一直滚动因为距离一直在滚动的范围；因此请求数据前要先判断如果页数到了最后一页就不需要再次请求数据了
+                if(this.current==this.total){
+                    // 到底了提示已经到底了并移除
+                    Toast({
+                    message:"已经到底了...",//配置信息
+                    position:'bottom',//距离，底部
+                // 移除图标
+                    duration:1000//5000多长时间消失，若为-1则不会自动关闭
+                });
+                    return false;
+                }
+                // 引入mint-ui中的toast组件（加载旋转字体图标）
+                let toast = Toast({
+                    message:"数据加载中...",//配置信息
+                    // position:'bottom',//距离
+                    iconClass: "fa fa-cog fa-spin",
+                    // 'icon icon-success'，以上为到字体图标库找到的加载的菊花图（可换），只需要类名即可；一般还要配置一个类名fa-spin使用才可以转起来
+                    duration:-1//5000多长时间消失，若为-1则不会自动关闭
+                });
+                // 触发请求，一旦在加载中时让loading为true即不滚动
+                this.loading=true
+
+
+
+
             this.$axios.get(`/api/mobile/index.php?act=goodsclass&op=list&${id}&gc_id=17`,{
 
             })
@@ -184,14 +218,26 @@ Vue.use(InfiniteScroll);
                 //ul.hot
                 this.goodslist4=res.data.datas.list[6].brand.item;
 
-                
-
+    
 
                 // this.pic0=res.data.datas.list[1].home1.image
                 console.log(this.pic1)
 
                 console.log(this.navlist)
                 console.log(this.goodslist4)
+
+
+
+                // 数据加载字体图标关闭（不管是否请求成功都要关闭）
+                    toast.close();
+                    // 请求后滚动图标再次滚动
+                    this.loading=false
+                    // 每次请求完成页数发生变化
+                    this.current=res.data.data.page.current
+                    this.total=res.data.data.page.total
+
+
+
 
             })
             .catch((err)=>{

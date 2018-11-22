@@ -16,6 +16,8 @@ import Details from "../components/pages/Details/Details.vue"
 import Search from '../components/pages/Search/Search.vue'
 //引入购物车页面
 import ShoppingCar from "../components/pages/ShoppingCar/ShoppingCar.vue"
+
+
 //引入我的页面my
 import My from "../components/pages/My/My.vue"
 //引入My我的页面下的子页面login登录页面
@@ -48,7 +50,7 @@ let router = new VueRouter({
     {
         //路由传参：
         //1.动态路由
-        path:'/details/:id',
+        path:'/details/',//:id
         component:Details,
         name:"details"
     },

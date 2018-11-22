@@ -33,7 +33,7 @@
 
 <script type="text/javascript">
 // 引入swiper 轮播图插件
-import Swiper from 'swiper'
+// import Swiper from 'swiper'
 // 引入vue    
 import Vue from "vue"
 // 引入axios(main.js)
