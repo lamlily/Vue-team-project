@@ -20,9 +20,11 @@
            <li 
            v-for="(item,index) in tablist"
            :key="index"
-           @click='goPage(item.path)'>
-                <i :class="item.icon" aria-hidden="true"></i>
-                <span>{{item.name}}</span>
+           @click='goPage(item.path),sel(item.name)'   
+           >
+           <!-- 点击事件多个用逗号隔开 -->
+                <i :class="item.icon" aria-hidden="true" ></i>
+                <span :class='selInit==item.name?"active":" "'>{{item.name}}</span>
            </li>
        </ul>
     </div>
@@ -38,10 +40,18 @@
         components:{},
         data(){
             return{
-              tablist:[{name:'商城',path:"/home",icon:"fa fa-university"},{name:'分类',path:"/goods",icon:"fa fa-bars"},{name:'购物车',path:'/shoppingcar',icon:"fa fa-shopping-cart"},{name:'我的',path:"/my",icon:"fa fa-user"}]
+              tablist:[{name:'商城',path:"/home",icon:"fa fa-university"},{name:'分类',path:"/goods",icon:"fa fa-bars"},{name:'购物车',path:'/shoppingcar',icon:"fa fa-shopping-cart"},{name:'我的',path:"/my",icon:"fa fa-user"}],
+
+              selInit:"商城"
             }
         },
         methods:{
+          //添加高亮类名
+          sel(name){
+            this.selInit=name
+          },
+          
+
            goPage(path){
             console.log(999)
             this.$router.push(path)
@@ -88,6 +98,11 @@
         }
     }
 }
+.active{
+    // background: #ff0066;
+    color:#ff0066;
+}
+
     
     
 </style>

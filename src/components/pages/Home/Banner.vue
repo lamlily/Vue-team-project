@@ -7,7 +7,7 @@
             <!-- 通过v-for循环动态生成数据 -->
                 <div class="swiper-slide" v-for="(item,index) in bannerlist" :key="index">
                     <!--轮播图的图片 -->
-                    <img :src="item.image" alt="" />
+                    <img v-lazy="item.image" alt="" />
                     <!-- 通过axios请求get获取到网站的图片 -->
                 </div>
                 <!-- <div class="swiper-slide">Slide 2</div>
@@ -38,6 +38,7 @@ import Swiper from 'swiper'
 import Vue from "vue"
 // 引入axios(main.js)
 import Axios from 'axios'
+import {lazyload} from 'mint-ui';
 
     export default{
         name:'Banner',

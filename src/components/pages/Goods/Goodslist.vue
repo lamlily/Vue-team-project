@@ -3,8 +3,13 @@
     <div class="goodslist">
         <!-- 我是Goodslist vue   -->
         <ul class="nav">
-               <li v-for='(item,index) in navlist' 
-            :key="index">
+               <li 
+               v-for='(item,index) in navlist' 
+                :key="index"
+                @click="sel(item.class_code_id)"
+                :class='selInit==item.class_code_id?"active":" "'
+
+            >
                     <p>{{item.class_code_desc}}</p>
                     <p>{{item.class_code_entitle}}</p>
                 </li>            
@@ -93,9 +98,10 @@
                 </li>            
             </ul>
                 
-            
-
         </div> 
+
+
+        
     </div>
 </template>
 
@@ -130,13 +136,24 @@ Vue.use(InfiniteScroll);
                goodslist3:[],
                goodslist4:[],
 
+               selInit:"17",
+
+
 
             }
         },
 
         methods:{
-           getData(){
-            this.$axios.get(`/api/mobile/index.php?act=goodsclass&op=list&class_code_id=17&gc_id=17`,{
+            sel(id){
+
+                this.getData(id)
+                this.selInit=id
+                console.log(789789)
+            },
+
+
+           getData(id){
+            this.$axios.get(`/api/mobile/index.php?act=goodsclass&op=list&${id}&gc_id=17`,{
 
             })
             .then((res)=>{
@@ -222,10 +239,13 @@ Vue.use(InfiniteScroll);
             p:nth-of-type(2){
                 .fs(6);
             }
-            .active{
-                background: #ff0066;
-                color:#fff;
-            }
+        // .active{
+        //     background: #ff0066;
+        //     color:#fff;
+        // }
+            
+
+
 
         }
     } 
@@ -334,5 +354,10 @@ Vue.use(InfiniteScroll);
         }
     }
 }
+.active{
+    background: #ff0066;
+    color:#fff;
+}
+           
 
 </style>

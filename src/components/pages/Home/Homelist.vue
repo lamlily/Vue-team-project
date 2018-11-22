@@ -4,7 +4,7 @@
         <div class="homebox">
 
             <div class="head">
-                <img :src="pic0" alt="" />
+                <img v-lazy="pic0" alt="" />
             </div>
 
             <div class="menu1">

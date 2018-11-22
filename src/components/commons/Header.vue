@@ -36,7 +36,7 @@
 // 引入配置样式总模块，固定写法
 @import url('../../styls/main.less');
 .header{
-     position:fixed;
+    position:fixed;
     top:0;
     left:0;
     z-index:999;
@@ -48,7 +48,9 @@
         // position:fixed;
         top:0;
         left:0;
-        background:#d92e35;
+        // background:#d92e35;
+        // 自改色
+        background: #ff0066;
         display: flex;
         align-items:center;
         input{
@@ -58,6 +60,8 @@
             margin-right: 0.5rem;
             border-radius: 0.7rem;
             background: #fff;
+            .padding(5,0,0,20);
+            box-sizing: border-box;
         }
         .log{
             .w(40);

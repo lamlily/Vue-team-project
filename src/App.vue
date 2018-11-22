@@ -5,7 +5,11 @@
     <Header></Header>
     <!-- <Slider></Slider> -->
     <!-- <Home></Home> --> 
-    <router-view></router-view>
+    <!-- 缓存首页 -->
+    <!-- <keep-alive :include=:"home"> -->
+        <router-view></router-view>
+    <!-- </keep-alive> -->
+    
 
     <Footer></Footer>
 
