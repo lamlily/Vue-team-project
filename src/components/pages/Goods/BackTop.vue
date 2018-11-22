@@ -25,7 +25,7 @@
             return{
                show:false,
                //默认开始显示为false;
-               distance:200
+               distance:100
                //监听距离
             }
         },
@@ -69,12 +69,12 @@
 @import url('../../../styls/main.less');
     .contain{
         position:fixed;
-        right:20px;
-        bottom:20px;
+        .right(10);
+        .bottom(60);
         .w(50);
         .h(50);
         border-radius:50%;
-        background:#000;
+        background:rgba(0,0,0,.5);
         color:#fff;
         .fs(22);
         text-align:center;

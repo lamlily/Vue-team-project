@@ -362,8 +362,10 @@ import {lazyload} from 'mint-ui';
                     span{
                         .fs(12);
                         position:absolute;
-                        left:12px;
-                        top:29px;
+                        // left:12px;
+                        // top:29px;
+                        .left(12);
+                        .top(29);
                     }
                 }
             }
@@ -425,7 +427,8 @@ import {lazyload} from 'mint-ui';
                     }
                     p{
                         .fs(12);
-                        margin-bottom:5px;
+                        // margin-bottom:5px;
+                        .margin(0,0,5,0);
                         span{
                             .fs(12);
                             text-decoration:line-through;
@@ -442,7 +445,8 @@ import {lazyload} from 'mint-ui';
                     p:nth-of-type(2){
                         color:#fff;
                         background: #ff0066;
-                        border-radius: 10px;
+                        // border-radius: 10px;
+                        .border-radius(10);
                         .w(108);
                         text-align: center;
                     }
@@ -485,7 +489,8 @@ import {lazyload} from 'mint-ui';
                     }
                     p{
                         .fs(12);
-                        margin-bottom:5px;
+                        // margin-bottom:5px;
+                        .margin(0,0,5,0);
                         span{
                             .fs(12);
                             text-decoration:line-through;
@@ -502,7 +507,8 @@ import {lazyload} from 'mint-ui';
                     p:nth-of-type(2){
                         color:#fff;
                         background: #ff0066;
-                        border-radius: 10px;
+                        // border-radius: 10px;
+                        .border-radius(10);
                         .w(108);
                         text-align: center;
                     }
@@ -547,14 +553,16 @@ import {lazyload} from 'mint-ui';
                     background: #fff;
                     // border:1px solid #ccc;
                     .margin(2,1,1,1);
-                    border-radius:5px;
+                    // border-radius:5px;
+                    .border-radius(5);
                     img{
                         .w(168);
                         .h(178);
                     }
                     p{
                         .fs(12);
-                        margin-bottom:5px;
+                        // margin-bottom:5px;
+                        .margin(0,0,5,0);
                         span{
                             .fs(12);
                             text-decoration:line-through;
@@ -571,7 +579,8 @@ import {lazyload} from 'mint-ui';
                     p:nth-of-type(2){
                         color:#fff;
                         background: #ff0066;
-                        border-radius: 10px;
+                        // border-radius: 10px;
+                        .border-radius(10);
                         .w(108);
                         text-align: center;
                     }

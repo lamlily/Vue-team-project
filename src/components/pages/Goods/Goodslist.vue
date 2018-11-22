@@ -19,10 +19,34 @@
             </ul>
             
             <ul class="top1">
-                <li v-for='(item,index) in goodslist2' 
-                 :key="index">
-                    <img :src="pic4" alt="" />
+                <li >
+                    <img :src="pic21" alt="" />
                 </li>
+                <li >
+                    <img :src="pic22" alt="" />
+                </li>
+                <li >
+                    <img :src="pic23" alt="" />
+                </li>
+                <li >
+                    <img :src="pic25" alt="" />
+                </li>
+                <li >
+                    <img :src="pic26" alt="" />
+                </li>
+                <li >
+                    <img :src="pic24" alt="" />
+                </li>
+                <li >
+                    <img :src="pic24" alt="" />
+                </li>
+                <li >
+                    <img :src="pic25" alt="" />
+                </li>
+                <li >
+                    <img :src="pic26" alt="" />
+                </li>
+               
                 
             </ul>
             <!-- <ul class='top2'>
@@ -52,8 +76,7 @@
                    <img :src="item.goods_image" alt="" />
                     <span>{{item.goods_name}}</span>
                     <span>￥{{item.goods_promotion_price}}</span> 
-                </li>  
-                         
+                </li>                     
             </ul>
 
 
@@ -67,8 +90,7 @@
                 >
                   <img :src="item.brand_pic" alt="" />
                   <span>{{item.brand_name}}</span>  
-                </li>
-                
+                </li>            
             </ul>
                 
             
@@ -98,7 +120,12 @@ Vue.use(InfiniteScroll);
                pic1:[],
                pic2:[],
                pic3:[],
-               pic4:[],
+               pic21:[],
+               pic22:[],
+               pic23:[],
+               pic24:[],
+               pic25:[],
+               pic26:[],
                goodslist2:[],
                goodslist3:[],
                goodslist4:[],
@@ -124,8 +151,16 @@ Vue.use(InfiniteScroll);
                 this.pic2=res.data.datas.list[3].home1.image;
                 this.pic3=res.data.datas.list[4].home1.image;
                 //ul.top
-                this.goodslist2=res.data.datas.list[1].home8;
-                this.pic4=res.data.datas.list[1].home8.rectangle1_image
+                // this.goodslist2=this.goodslist.concat((res.data.datas.list[2].home5).slice(8));
+                // thi.goodslist2=this.goodslist2.slice(0,8);
+                this.goodslist2 = res.data.datas.list[2].home5
+
+                this.pic21=res.data.datas.list[1].home8.rectangle1_image
+                this.pic22=res.data.datas.list[1].home8.rectangle2_image
+                this.pic23=res.data.datas.list[1].home8.rectangle3_image
+                this.pic24=res.data.datas.list[2].home5.rectangle1_image
+                this.pic25=res.data.datas.list[2].home5.rectangle2_image
+                this.pic26=res.data.datas.list[2].home5.rectangle3_image
 
                 //ul.salse
                 this.goodslist3=res.data.datas.list[5].goods.item;
@@ -219,10 +254,11 @@ Vue.use(InfiniteScroll);
             // background: pink;
             display:flex;
             flex-wrap: wrap;
+            // background: #000;
             li{
-                .w(83);
+                .w(84);
                 .h(56);
-                background: orange;
+                // background: #58bc58;
                 img{
                     .h(56);
                 }
@@ -253,14 +289,20 @@ Vue.use(InfiniteScroll);
                     .h(76);
                 }
                 span{
-                    // color:#ccc;
+                    color:#999;
+                    .w(80);
+                    .h(40);
+                    display:block;
                     .fs(14);
                     overflow: hidden;
                     text-overflow:ellipsis;
-                    white-space: nowrap;
+                    // white-space: nowrap;
+                    
                 }
                 span:last-of-type{
                         color:#ff0066;
+                        .margin(5,0,0,0);
+                        text-align: center;
                     }
             }
         }
@@ -269,6 +311,7 @@ Vue.use(InfiniteScroll);
             .h(780);
             display:flex;
             flex-wrap:wrap;
+            color:#999;
 
             li{
                 .w(82);
@@ -279,6 +322,7 @@ Vue.use(InfiniteScroll);
                 img{
                     .w(76);
                     .h(76);
+                    .margin(5,0,0,0);
                 }
                 span{
                     // color:#ccc;
