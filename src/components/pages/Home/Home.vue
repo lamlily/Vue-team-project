@@ -32,7 +32,7 @@ import Homelist from './Homelist.vue'
 <style lang="less" scoped>
 @import url('../../../styls/main.less');
   .home{
-    margin-top:46px;
+    margin-top:39px;
   }
 
 

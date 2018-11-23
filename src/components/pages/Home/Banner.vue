@@ -7,7 +7,7 @@
             <!-- 通过v-for循环动态生成数据 -->
                 <div class="swiper-slide" v-for="(item,index) in bannerlist" :key="index">
                     <!--轮播图的图片 -->
-                    <img v-lazy="item.image" alt="" />
+                    <img :src="item.image" alt="" />
                     <!-- 通过axios请求get获取到网站的图片 -->
                 </div>
                 <!-- <div class="swiper-slide">Slide 2</div>
@@ -71,6 +71,7 @@ import {lazyload} from 'mint-ui';
                     // }else{
                     //     alert(res.data.msg)
                     // }
+                    console.log(this.bannerlist)
                   
                 })  
                 .catch((err)=>{
@@ -136,7 +137,7 @@ import {lazyload} from 'mint-ui';
 @import url('../../../../node_modules/swiper/dist/css/swiper.min.css');
 
 .banner{
-    .w(375);
+    /*.w(375);*/
     .h(180);
       img{
         /*.w(375);*/

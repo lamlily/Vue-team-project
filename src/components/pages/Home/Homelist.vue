@@ -378,6 +378,8 @@ Vue.use(InfiniteScroll);
 <style  lang="less" scoped>
 @import url('../../../styls/main.less');
 .homelist{
+    // .w(375);
+
     .homebox{
         .w(375);
         .h(9420);
@@ -387,7 +389,7 @@ Vue.use(InfiniteScroll);
             // background:rgba(0,255,180);
             margin-bottom:0.2rem;
             img{
-                .w(375);
+                .w(373);
                 .h(62);
             }
         }
@@ -399,14 +401,15 @@ Vue.use(InfiniteScroll);
                 // li换行
                 flex-wrap:wrap;  
                 li{
-                    .w(75);
+                    width:20%;
+                    // flex:1;
                     .h(75);
                     // background: pink;
                     text-align: center;
                     .lh(75);
                     position:relative;
                     img{
-                        .w(52);
+                        // .w(52);
                         .h(52);
                     }
                     span{
@@ -424,53 +427,52 @@ Vue.use(InfiniteScroll);
             display:flex;
             flex-wrap:wrap;
             ul{
-                
+                width:50%;            
                 .h(188);
                 li{
-                   .w(178);
                    .h(85);
                    // background: skyblue; 
                    .margin(8,2,2,6);
 
                    img{
-                    .w(178);
+                    // .w(178);
                     .h(85);
                    }
                 }
             }
         }
         .product0{
-            .w(363);
+            // .w(363);
             .h(500);
             // background:orange;
             .margin(0,0,10,0);
             div{
-                .w(363);
+                // .w(363);
                 .h(157);
-                background: #58bc58;
+                // background: #58bc58;
                 .margin(5,0,0,4);
                 img{
                     .h(157);
                 }
             }
             ul{
-                .w(363);
+                // .w(363);
                 display:flex;
                 flex-wrap:wrap;
                 box-sizing: border-box;
-                .margin(0,0,0,6);
+                .margin(0,6,0,6);
 
 
                 // .margin(5,0,0,26);
 
                 li{
-                    .w(120);
+                    width:33.3%;
                     .h(171);
                     background: #fff;
                 
 
                     img{
-                        .w(84);
+                        // .w(84);
                         .h(84);
                         .margin(5,10,0,15);
 
@@ -507,32 +509,33 @@ Vue.use(InfiniteScroll);
             }
         }
         .produce0{
-            .w(363);
+            // .w(363);
             .h(241);
             // background: yellow;
              .margin(0,0,10,0);
             div{
-                .w(363);
+                // .w(363);
                 .h(70);
                 background: #fff;
-                .margin(5,0,0,6);
+                .margin(5,8,0,6);
                 img{
+                    .w(364);
                     .h(70);
                 }
             }
             ul{
-                .w(363);
+                // .w(363);
                 display:flex;
                 flex-wrap:wrap;
-                .margin(0,0,0,6);
+                .margin(0,6,0,6);
 
                  li{
-                    .w(120);
+                    width:33.3%;
                     .h(171);
                     background: #fff;
 
                     img{
-                        .w(84);
+                        // .w(84);
                         .h(84);
                         .margin(5,10,0,15);
 
@@ -569,13 +572,14 @@ Vue.use(InfiniteScroll);
             }
         }
         .produce9{
-            .w(363);
+            // .w(363);
             .h(325);
             // background: red;
             div{
-                .w(360);
+                // .w(360);
                 .h(155);
                 img{
+                    .w(360);
                     .h(155);
                 }
 
@@ -598,7 +602,7 @@ Vue.use(InfiniteScroll);
                 .margin(0,2,0,4);
 
                 li{
-                    .w(180);
+                    width:49%;
                     .h(251);
                     background: #fff;
                     // border:1px solid #ccc;
@@ -606,7 +610,7 @@ Vue.use(InfiniteScroll);
                     // border-radius:5px;
                     .border-radius(5);
                     img{
-                        .w(168);
+                        // .w(168);
                         .h(178);
                     }
                     p{
@@ -649,6 +653,7 @@ Vue.use(InfiniteScroll);
         }
     }
     
+
 }
    
 </style>
