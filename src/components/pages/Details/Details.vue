@@ -1,5 +1,8 @@
 
 <template>
+
+<!-- <Details_header></Details_header> -->
+
     <div class="details" >
         <!-- 我是details我是details我是details我是details我是details我是details我是details我是details我是details我是details -->
         <!-- {{detailslist}} -->
@@ -114,9 +117,9 @@
             </li>
         </ul>
         
-         
-        
     </div>
+
+<!-- <Details_footer></Details_footer> -->
 
 </template>
 
@@ -129,11 +132,15 @@ import {Toast} from 'mint-ui';
 // 引入swiper 轮播图插件
 import Swiper from 'swiper'
 import {lazyload} from 'mint-ui';
+//头部
+// import Details_header from "./Details_header.vue"
+//底部
+// import Details_footer from "./Details_footer.vue"
 
 
     export default{
         name:'Details',
-        components:{},
+        // components:{Details_header,Details_footer},
         data(){
             return{
 
