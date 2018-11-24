@@ -46,6 +46,10 @@
 <style lang="less" scoped>
 // 引入配置样式总模块，固定写法
 @import url('../../../styls/main.less');
+// *{
+// //页面移动bug
+//     border:1px solid red;
+// }
 .tips{
     width:100%;
     .h(56);
@@ -53,6 +57,7 @@
     .fs(16);
     .padding(15,10,10,10);
     margin-top:35px;
+    box-sizing: border-box;
     p{
         .margin(10,0,20,0); 
         color:#999;
