@@ -10,7 +10,7 @@
                 :class='selInit==item.class_code_id?"active":" "'
     
                 >
-                    <p>{{item.class_code_desc}}</p>
+                    <p>{{item.class_code_title}}</p>
                     <p>{{item.class_code_entitle}}</p>
                 </li>            
         </ul>  
@@ -157,9 +157,6 @@ Vue.use(InfiniteScroll);
                 this.$router.push({path:`/details/877779407`})
             },
             goDetails2(id){
-                this.$router.push({path:`/details/${id}`})
-            },
-            changeGoods(id){
                 this.$router.push({path:`/details/${id}`})
             },
 

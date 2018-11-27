@@ -43,7 +43,12 @@ let router = new VueRouter({
         name:'home'
     },
     {
-        path:'/goods',
+        path:'/goods',//:id
+        component:Goods,
+        name:'goods'
+    },
+    {
+        path:'/goods/:id/:code',//:id
         component:Goods,
         name:'goods'
     },
