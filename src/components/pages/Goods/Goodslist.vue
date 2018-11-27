@@ -77,7 +77,7 @@
             <p>——   畅销商品  ——</p>
             <ul class='sales'>  
                 <li v-for='(item,index) in goodslist3' 
-                    :key="index" @click="goDetails">
+                    :key="index" @click="goDetails2(item.goods_id)">
                    <img :src="item.goods_image" alt="" />
                     <span>{{item.goods_name}}</span>
                     <span>￥{{item.goods_promotion_price}}</span> 
@@ -154,8 +154,15 @@ Vue.use(InfiniteScroll);
         methods:{
 
             goDetails(){
-                this.$router.push("/details")
+                this.$router.push({path:`/details/877779407`})
             },
+            goDetails2(id){
+                this.$router.push({path:`/details/${id}`})
+            },
+            changeGoods(id){
+                this.$router.push({path:`/details/${id}`})
+            },
+
 
             sel(id){
 
