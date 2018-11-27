@@ -12,6 +12,7 @@
                    <li 
                    v-for="(item,index) in menu1" 
                    :key="index"
+                   @click="goDetails"
                    >
                         <img :src="item.nav_image" alt="" />
                         <span>{{item.nav_title}}</span>
@@ -21,25 +22,25 @@
             </div>
             <div class="menu2" >
                 <ul>
-                    <li v-for="(item,index) in menu2" :key="index"><img :src="item.rectangle1_image" alt="" /><img :src="item.rectangle2_image" alt="" /></li>
+                    <li v-for="(item,index) in menu2" :key="index" @click="goDetails"><img :src="item.rectangle1_image" alt="" /><img :src="item.rectangle2_image" alt="" /></li>
                                
                 </ul>
                 <ul>
-                    <li v-for="(item,index) in menu3" :key="index"><img :src="item.rectangle1_image" alt="" /><img :src="item.rectangle2_image" alt="" /></li>
+                    <li v-for="(item,index) in menu3" :key="index" @click="goDetails"><img :src="item.rectangle1_image" alt="" /><img :src="item.rectangle2_image" alt="" /></li>
                 </ul>
             </div>
 
             
             <div class="product1 product0">
-                <div><img :src="productpic" alt="" /></div>
+                <div><img :src="productpic" alt="" @click="goDetails"/></div>
                 <ul>
-                    <li v-for="(item,index) in product" :key="index">
+                    <li v-for="(item,index) in product" :key="index"  @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
                         <p>￥{{item.goods_price}}<span>￥{{item.goods_marketprice}}</span></p>
                     </li>  
-                    <li v-for="(item,index) in product0" >
+                    <li v-for="(item,index) in product0" @click="goDetails2(item.goods_id)"  >
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -50,10 +51,10 @@
                           
                 <!-- </ul> -->
             </div>
-            <div class="product2 product0">
-                <div><img :src="productpic1" alt="" /></div>
+            <div class="product2 product0"  >
+                <div><img :src="productpic1" alt="" @click="goDetails" /></div>
                 <ul>
-                    <li v-for="(item,index) in product1" :key="index">
+                    <li v-for="(item,index) in product1" :key="index" @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -65,10 +66,10 @@
                           
                 <!-- </ul> -->
             </div>
-            <div class="product3 product0">
-                <div><img :src="productpic2" alt="" /></div>
+            <div class="product3 product0" >
+                <div><img :src="productpic2" alt="" @click="goDetails"/></div>
                 <ul>
-                    <li v-for="(item,index) in product2" :key="index">
+                    <li v-for="(item,index) in product2" :key="index" @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -81,10 +82,10 @@
             </div>
 
 
-            <div class="produce1 produce0">
-                <div><img :src="producepic" alt="" /></div>
+            <div class="produce1 produce0" >
+                <div><img :src="producepic" alt="" @click="goDetails" /></div>
                 <ul>
-                    <li v-for="(item,index) in produce" :key="index">
+                    <li v-for="(item,index) in produce" :key="index" @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -92,10 +93,10 @@
                     </li>               
                 </ul>
             </div>
-            <div class="produce2 produce0">
-                <div><img :src="producepic1" alt="" /></div>
+            <div class="produce2 produce0" >
+                <div><img :src="producepic1" alt=""  @click="goDetails" /></div>
                 <ul>
-                    <li v-for="(item,index) in produce1" :key="index">
+                    <li v-for="(item,index) in produce1" :key="index"  @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -103,10 +104,10 @@
                     </li>               
                 </ul>
             </div>
-            <div class="produce3 produce0">
-                <div><img :src="producepic2" alt="" /></div>
+            <div class="produce3 produce0" >
+                <div><img :src="producepic2" alt=""  @click="goDetails"/></div>
                 <ul>
-                    <li v-for="(item,index) in produce2" :key="index">
+                    <li v-for="(item,index) in produce2" :key="index" @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -116,10 +117,10 @@
             </div>
             
 
-            <div class="produce4 produce0 produce9">
-                <div><img :src="producepic4" alt="" /><span>Eric Favre埃里克</span></div>
-                <ul>
-                    <li v-for="(item,index) in produce4" :key="index">
+            <div class="produce4 produce0 produce9" >
+                <div><img :src="producepic4" alt=""  @click="goDetails"/><span>Eric Favre埃里克</span></div>
+                <ul >
+                    <li v-for="(item,index) in produce4" :key="index"  @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p></p>
@@ -128,9 +129,9 @@
                 </ul>
             </div>
             <div class="produce4 produce0 produce9">
-                <div><img :src="producepic5" alt="" /></div>
+                <div><img :src="producepic5" alt=""  @click="goDetails"/></div>
                 <ul>
-                    <li v-for="(item,index) in produce5" :key="index">
+                    <li v-for="(item,index) in produce5" :key="index"  @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p></p>
@@ -138,10 +139,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="produce4 produce0 produce9">
-                <div><img :src="producepic6" alt="" /></div>
+            <div class="produce4 produce0 produce9" >
+                <div><img :src="producepic6" alt=""  @click="goDetails" /></div>
                 <ul>
-                    <li v-for="(item,index) in produce6" :key="index">
+                    <li v-for="(item,index) in produce6" :key="index" @click="goDetails2(item.goods_id)" >
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p></p>
@@ -151,10 +152,10 @@
             </div>
 
 
-            <div class="produce7 produce0">
-                <div><img :src="producepic7" alt="" /></div>
+            <div class="produce7 produce0" >
+                <div><img :src="producepic7" alt=""  @click="goDetails" /></div>
                 <ul>
-                    <li v-for="(item,index) in produce7" :key="index">
+                    <li v-for="(item,index) in produce7" :key="index"  @click="goDetails2(item.goods_id)">
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -162,10 +163,10 @@
                     </li>               
                 </ul>
             </div>
-            <div class="produce8 produce0">
-                <div><img :src="producepic8" alt="" /></div>
+            <div class="produce8 produce0" >
+                <div><img :src="producepic8" alt=""   @click="goDetails"/></div>
                 <ul>
-                    <li v-for="(item,index) in produce8" :key="index">
+                    <li v-for="(item,index) in produce8" :key="index" @click="goDetails2(item.goods_id)" >
                         <img :src="item.goods_image" alt="" />
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
@@ -190,7 +191,7 @@
                 <p class="every">大家都在看</p>
                 <ul>
                     <li v-for="(item,index) in others" :key="index">
-                        <img :src="item.goods_image" alt="" />
+                        <img :src="item.goods_image" alt="" @click="goDetails2(item.goods_id)"/>
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
                         <p>￥{{item.goods_price}}<span>￥{{item.goods_marketprice}}</span></p>
@@ -213,6 +214,8 @@ import {Toast} from 'mint-ui';
 //引入无限加载mint-ui组件
 import {InfiniteScroll} from "mint-ui";
 Vue.use(InfiniteScroll);
+
+
 
 
     export default{
@@ -262,9 +265,17 @@ Vue.use(InfiniteScroll);
             }
         },
         methods:{
+            // goDetails(){
+            //     this.$router.push("/details")
+            // },
+             goDetails(){
+                this.$router.push({path:`/details/877779407`})
+            },
+             goDetails2(id){
+                this.$router.push({path:`/details/${id}`})
+            },
 
-
-          getData(){
+            getData(){
 
             // 因为页面到底会出现加载图标一直滚动因为距离一直在滚动的范围；因此请求数据前要先判断如果页数到了最后一页就不需要再次请求数据了
                 if(this.current==this.total){
@@ -290,83 +301,83 @@ Vue.use(InfiniteScroll);
 
 
 
-            this.$axios.get(`/api/mobile/index.php?act=index`,{
+                this.$axios.get(`/api/mobile/index.php?act=index`,{
                 
 
-            })
-            .then((res)=>{
-                // console.log(res.data.datas.list[1].home1.image)
-                 // console.log(res.data.datas.list)
-                // console.log(piclist)
-                // 打印获取到的数据为数组需要和原来定的piclist合并数组
-                this.piclist=this.piclist.concat((res.data.datas.list).slice(2))
-                //获取到的数据List[0]为banner;[1]为box头部,从[2]开始截取
-                //boxhead一个图片
-                this.pic0=res.data.datas.list[1].home1.image
-                //menu1:
-                this.menu1=this.menu1.concat(res.data.datas.list[2].icons.item)
-                //menu2
-                this.menu2=this.menu2.concat(res.data.datas.list[3].home7)
-                this.menu3=this.menu3.concat(res.data.datas.list[4].home7)
-                //product
-                this.productpic = this.productpic.concat(res.data.datas.list[5].goods.image)
-                this.product = this.product.concat(res.data.datas.list[5].goods.item)
-                this.product0 = this.product0.concat((res.data.datas.list[6].goods.item).slice(-1))
-                this.product1 = this.product1.concat((res.data.datas.list[7].goods.item))
-                this.productpic1 = this.productpic1.concat(res.data.datas.list[7].goods.image)
-                this.product2 = this.product2.concat((res.data.datas.list[9].goods.item))
-                this.productpic2 = this.productpic2.concat(res.data.datas.list[9].goods.image)
-                //produce
-                this.produce = this.produce.concat((res.data.datas.list[11].goods.item).slice(0,3))
-                this.producepic = this.producepic.concat(res.data.datas.list[11].goods.image)
-                this.produce1 = this.produce1.concat((res.data.datas.list[12].goods.item).slice(0,3))
-                this.producepic1 = this.producepic1.concat(res.data.datas.list[12].goods.image)
-                this.produce2 = this.produce2.concat((res.data.datas.list[13].goods.item).slice(0,3))
-                this.producepic2 = this.producepic2.concat(res.data.datas.list[13].goods.image)
-                //produce456
-                this.produce4 = this.produce4.concat((res.data.datas.list[14].goods.item).slice(0,3))
-                this.producepic4 = this.producepic4.concat(res.data.datas.list[14].goods.image)
-                this.produce5 = this.produce5.concat((res.data.datas.list[15].goods.item).slice(0,3))
-                this.producepic5= this.producepic5.concat(res.data.datas.list[15].goods.image)
-                this.produce6 = this.produce6.concat((res.data.datas.list[16].goods.item).slice(0,3))
-                this.producepic6 = this.producepic6.concat(res.data.datas.list[16].goods.image)
-                //produce789
-                this.produce7 = this.produce7.concat((res.data.datas.list[17].brand.item).slice(0,3))
-                this.producepic7 = this.producepic7.concat(res.data.datas.list[17].brand.image)
-                this.produce8 = this.produce8.concat((res.data.datas.list[18].brand.item).slice(0,3))
-                this.producepic8 = this.producepic8.concat(res.data.datas.list[18].brand.image)
-                this.produce9 = this.produce9.concat((res.data.datas.list[19].brand.item).slice(0,3))
-                this.producepic9 = this.producepic9.concat(res.data.datas.list[19].brand.image)
-                //others
-                this.others = this.others.concat(res.data.datas.list[22].new_goods.item)
-               
+                })
+                .then((res)=>{
+                    // console.log(res.data.datas.list[1].home1.image)
+                     // console.log(res.data.datas.list)
+                    // console.log(piclist)
+                    // 打印获取到的数据为数组需要和原来定的piclist合并数组
+                    this.piclist=this.piclist.concat((res.data.datas.list).slice(2))
+                    //获取到的数据List[0]为banner;[1]为box头部,从[2]开始截取
+                    //boxhead一个图片
+                    this.pic0=res.data.datas.list[1].home1.image
+                    //menu1:
+                    this.menu1=this.menu1.concat(res.data.datas.list[2].icons.item)
+                    //menu2
+                    this.menu2=this.menu2.concat(res.data.datas.list[3].home7)
+                    this.menu3=this.menu3.concat(res.data.datas.list[4].home7)
+                    //product
+                    this.productpic = this.productpic.concat(res.data.datas.list[5].goods.image)
+                    this.product = this.product.concat(res.data.datas.list[5].goods.item)
+                    this.product0 = this.product0.concat((res.data.datas.list[6].goods.item).slice(-1))
+                    this.product1 = this.product1.concat((res.data.datas.list[7].goods.item))
+                    this.productpic1 = this.productpic1.concat(res.data.datas.list[7].goods.image)
+                    this.product2 = this.product2.concat((res.data.datas.list[9].goods.item))
+                    this.productpic2 = this.productpic2.concat(res.data.datas.list[9].goods.image)
+                    //produce
+                    this.produce = this.produce.concat((res.data.datas.list[11].goods.item).slice(0,3))
+                    this.producepic = this.producepic.concat(res.data.datas.list[11].goods.image)
+                    this.produce1 = this.produce1.concat((res.data.datas.list[12].goods.item).slice(0,3))
+                    this.producepic1 = this.producepic1.concat(res.data.datas.list[12].goods.image)
+                    this.produce2 = this.produce2.concat((res.data.datas.list[13].goods.item).slice(0,3))
+                    this.producepic2 = this.producepic2.concat(res.data.datas.list[13].goods.image)
+                    //produce456
+                    this.produce4 = this.produce4.concat((res.data.datas.list[14].goods.item).slice(0,3))
+                    this.producepic4 = this.producepic4.concat(res.data.datas.list[14].goods.image)
+                    this.produce5 = this.produce5.concat((res.data.datas.list[15].goods.item).slice(0,3))
+                    this.producepic5= this.producepic5.concat(res.data.datas.list[15].goods.image)
+                    this.produce6 = this.produce6.concat((res.data.datas.list[16].goods.item).slice(0,3))
+                    this.producepic6 = this.producepic6.concat(res.data.datas.list[16].goods.image)
+                    //produce789
+                    this.produce7 = this.produce7.concat((res.data.datas.list[17].brand.item).slice(0,3))
+                    this.producepic7 = this.producepic7.concat(res.data.datas.list[17].brand.image)
+                    this.produce8 = this.produce8.concat((res.data.datas.list[18].brand.item).slice(0,3))
+                    this.producepic8 = this.producepic8.concat(res.data.datas.list[18].brand.image)
+                    this.produce9 = this.produce9.concat((res.data.datas.list[19].brand.item).slice(0,3))
+                    this.producepic9 = this.producepic9.concat(res.data.datas.list[19].brand.image)
+                    //others
+                    this.others = this.others.concat(res.data.datas.list[22].new_goods.item)
+                   
 
 
-                console.log(this.piclist)
-                // =>this.movielist=res.data.data.films
-                // res.data.datas.list[1].home1.image
-                //res.data.datas.list[0].adv_list.item
-                // console.log(res)
-            
-                // console.log(this.pic0)
-                console.log(this.menu2)
-                console.log(this.product0)
-
-
-                // 数据加载字体图标关闭（不管是否请求成功都要关闭）
-                    toast.close();
-                    // 请求后滚动图标再次滚动
-                    this.loading=false
-                    // 每次请求完成页数发生变化
-                    this.current=res.data.data.page.current
-                    this.total=res.data.data.page.total
+                    console.log(this.piclist)
+                    // =>this.movielist=res.data.data.films
+                    // res.data.datas.list[1].home1.image
+                    //res.data.datas.list[0].adv_list.item
+                    // console.log(res)
                 
-                
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-          }
+                    // console.log(this.pic0)
+                    console.log(this.menu2)
+                    console.log(this.product0)
+
+
+                    // 数据加载字体图标关闭（不管是否请求成功都要关闭）
+                        toast.close();
+                        // 请求后滚动图标再次滚动
+                        this.loading=false
+                        // 每次请求完成页数发生变化
+                        this.current=res.data.data.page.current
+                        this.total=res.data.data.page.total
+                    
+                    
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+            }
         },
         created(){
           this.getData()

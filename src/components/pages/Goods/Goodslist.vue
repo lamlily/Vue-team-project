@@ -8,8 +8,8 @@
                 :key="index"
                 @click="sel(item.class_code_id)"
                 :class='selInit==item.class_code_id?"active":" "'
-
-            >
+    
+                >
                     <p>{{item.class_code_desc}}</p>
                     <p>{{item.class_code_entitle}}</p>
                 </li>            
@@ -17,13 +17,13 @@
         <div class="goods">
             <!-- {{goodslist}} -->
             
-            <ul class="advertise" >
+            <ul class="advertise"  @click="goDetails">
                 <li>
                     <img :src="pic1" alt="" />
                 </li>
             </ul>
             
-            <ul class="top1">
+            <ul class="top1" @click="goDetails">
                 <li >
                     <img :src="pic21" alt="" />
                 </li>
@@ -62,12 +62,12 @@
 
 
             <p>——   精选分类   ——</p>
-            <ul class="advertise">
+            <ul class="advertise" @click="goDetails" >
                 <li>
                     <img :src="pic2" alt="" />
                 </li>
             </ul>
-            <ul class="advertise">
+            <ul class="advertise" @click="goDetails">
                 <li>
                     <img :src="pic3" alt="" />
                 </li>
@@ -77,7 +77,7 @@
             <p>——   畅销商品  ——</p>
             <ul class='sales'>  
                 <li v-for='(item,index) in goodslist3' 
-                    :key="index">
+                    :key="index" @click="goDetails">
                    <img :src="item.goods_image" alt="" />
                     <span>{{item.goods_name}}</span>
                     <span>￥{{item.goods_promotion_price}}</span> 
@@ -88,7 +88,7 @@
             <!-- <div v-for='(item,index) in goodslist' 
             :key="index">  -->
             <p>——   热门品牌   ——</p>
-            <ul class='hot'>
+            <ul class='hot' @click="goDetails">
                 <li 
                     v-for='(item,index) in goodslist4' 
                     :key="index"
@@ -152,6 +152,11 @@ Vue.use(InfiniteScroll);
         },
 
         methods:{
+
+            goDetails(){
+                this.$router.push("/details")
+            },
+
             sel(id){
 
                 this.getData(id)

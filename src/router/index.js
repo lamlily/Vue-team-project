@@ -50,7 +50,7 @@ let router = new VueRouter({
     {
         //路由传参：
         //1.动态路由
-        path:'/details/',//:id
+        path:'/details/:id',//:id
         component:Details,
         name:"details"
     },

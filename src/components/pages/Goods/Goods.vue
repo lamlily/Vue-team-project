@@ -13,7 +13,7 @@
 
 <script type="text/javascript">
 import Goodslist from './Goodslist.vue'
-import BackTop from './BackTop.vue'
+import BackTop from '../../commons/BackTop.vue'
 
 
     export default{
