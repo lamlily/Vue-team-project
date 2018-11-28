@@ -74,7 +74,13 @@
                         <p>{{item.goods_name}}</p>
                         <p>{{item.goods_ad}}</p>
                         <p>￥{{item.goods_price}}<span>￥{{item.goods_marketprice}}</span></p>
-                    </li>                       
+                    </li>     
+                    <li v-for="(item,index) in product3" @click="goDetails2(item.goods_id)"  >
+                        <img :src="item.goods_image" alt="" />
+                        <p>{{item.goods_name}}</p>
+                        <p>{{item.goods_ad}}</p>
+                        <p>￥{{item.goods_price}}<span>￥{{item.goods_marketprice}}</span></p>
+                    </li>                    
                 </ul>
                  <!-- <ul> -->
                           
@@ -231,6 +237,7 @@ Vue.use(InfiniteScroll);
               product0:[],
               product1:[],
               product2:[],
+              product3:[],
               productpic:[],
               productpic1:[],
               productpic2:[],
@@ -327,6 +334,7 @@ Vue.use(InfiniteScroll);
                     this.productpic1 = this.productpic1.concat(res.data.datas.list[7].goods.image)
                     this.product2 = this.product2.concat((res.data.datas.list[9].goods.item))
                     this.productpic2 = this.productpic2.concat(res.data.datas.list[9].goods.image)
+                    this.product3 = this.product3.concat((res.data.datas.list[10].goods.item))
                     //produce
                     this.produce = this.produce.concat((res.data.datas.list[11].goods.item).slice(0,3))
                     this.producepic = this.producepic.concat(res.data.datas.list[11].goods.image)
